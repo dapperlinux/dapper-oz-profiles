@@ -1,0 +1,28 @@
+{
+"path": "/usr/bin/vlc"
+, "allow_files": true
+, "xserver": {
+	"enabled": true
+	, "enable_tray": false
+	, "tray_icon":"/usr/share/icons/hicolor/128x128/apps/vlc.png"
+	, "audio_mode": "pulseaudio"
+}
+, "networking":{
+	"type":"empty"
+}
+, "whitelist": [
+	{"path":"${HOME}/.config/vlc", "can_create":true}
+	, {"path":"/var/lib/oz/cells.d/vlc-whitelist.seccomp", "read_only":true}
+]
+, "environment": [
+	{"name":"GTK_THEME", "value":"dapper-dark"}
+	, {"name":"GTK2_RC_FILES", "value":"/usr/share/themes/dapper-dark/gtk-2.0/gtkrc"}
+]
+, "blacklist": [
+]
+, "seccomp": {
+	"mode":"whitelist"
+	, "whitelist": "/var/lib/oz/cells.d/vlc-whitelist.seccomp"
+	, "enforce": true
+}
+}

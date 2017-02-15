@@ -1,0 +1,28 @@
+{
+"name": "gimp"
+,"path": "/usr/bin/gimp-2.8"
+, "paths": [
+	"/usr/bin/gimp"
+]
+, "xserver": {
+	"enabled": true
+	, "enable_tray": false
+	, "tray_icon":"/usr/share/icons/hicolor/scalable/apps/gimp.svg"
+}
+, "networking":{
+	"type":"empty"
+}
+, "whitelist": [
+    {"path":"${HOME}/.gimp-2.8", "can_create":true}
+]
+, "blacklist": [
+]
+, "environment": [
+	{"name":"GTK_THEME", "value":"dapper-dark"}
+	, {"name":"GTK2_RC_FILES", "value":"/usr/share/themes/dapper-dark/gtk-2.0/gtkrc"}
+]
+, "seccomp": {
+	"mode":"blacklist"
+	, "enforce": true
+}
+}

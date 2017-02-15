@@ -1,0 +1,26 @@
+{
+"name": "inkscape"
+,"path": "/usr/bin/inkscape"
+, "xserver": {
+	"enabled": true
+	, "enable_tray": false
+	, "tray_icon":"/usr/share/icons/hicolor/scalable/apps/inkscape.svg"
+}
+, "networking":{
+	"type":"empty"
+}
+, "whitelist": [
+    {"path":"${HOME}/.config/inkscape", "can_create":true},
+    {"path":"${HOME}/.cache/inkscape", "can_create":true}
+]
+, "blacklist": [
+]
+, "environment": [
+	{"name":"GTK_THEME", "value":"dapper-dark"}
+	, {"name":"GTK2_RC_FILES", "value":"/usr/share/themes/dapper-dark/gtk-2.0/gtkrc"}
+]
+, "seccomp": {
+	"mode":"blacklist"
+	, "enforce": true
+}
+}

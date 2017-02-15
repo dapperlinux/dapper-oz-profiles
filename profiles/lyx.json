@@ -1,0 +1,25 @@
+{
+"name": "lyx"
+,"path": "/usr/bin/lyx"
+, "xserver": {
+	"enabled": true
+	, "enable_tray": false
+	, "tray_icon":"/usr/share/icons/hicolor/scalable/apps/lyx.svg"
+}
+, "networking":{
+	"type":"empty"
+}
+, "whitelist": [
+    {"path":"${HOME}/.config/LyX", "can_create":true}
+]
+, "blacklist": [
+]
+, "environment": [
+	{"name":"GTK_THEME", "value":"dapper-dark"}
+	, {"name":"GTK2_RC_FILES", "value":"/usr/share/themes/dapper-dark/gtk-2.0/gtkrc"}
+]
+, "seccomp": {
+	"mode":"blacklist"
+	, "enforce": true
+}
+}
