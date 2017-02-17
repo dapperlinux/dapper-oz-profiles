@@ -1,0 +1,59 @@
+#!/bin/bash
+# Oz sandbox profile setup for Dapper Linux
+# Typically Oz requires executables to be "diverted"/moved to /usr/bin-oz 
+# and symlinks pointing back to /usr/bin/oz left in place.
+# Dapper Linux takes a different approach and leaves the executables in place,
+# which enables execuables to be updated and have pax flags set.
+# So instead, we use the "oz launch <profile>" command, and stick it in 
+# application .desktop files, which is less intrusive.
+
+#------------------------------
+# Document and Image viewing
+#------------------------------
+sed -i "s/Exec=eog %U/Exec=oz launch eog %U/g" /usr/share/applications/eog.desktop
+sed -i "s/Exec=evince %U/Exec=oz launch evince %U/g" /usr/share/applications/evince.desktop
+
+#------------------------------
+# Image Editing
+#------------------------------
+sed -i "s/Exec=gimp-2.8 %U/Exec=oz launch gimp %U/g" /usr/share/applications/gimp.desktop
+sed -i "s/Exec=inkscape %F/Exec=oz launch inkscape %F/g" /usr/share/applications/inkscape.desktop
+
+#------------------------------
+# Misc Applications
+#------------------------------
+sed -i "s/Exec=gnome-builder %U/Exec=oz launch gnome-builder %U/g" /usr/share/applications/org.gnome.Builder.desktop
+
+#------------------------------
+# Media Programs
+#------------------------------
+sed -i "s/Exec=gnome-music/Exec=oz launch gnome-music/g" /usr/share/applications/gnome-music.desktop
+sed -i "s/Exec=totem %U/Exec=oz launch totem %U/g" /usr/share/applications/org.gnome.Totem.desktop
+sed -i "s#Exec=/usr/bin/vlc --started-from-file %U#Exec=oz launch vlc %U#g" /usr/share/applications/vlc.desktop
+
+#------------------------------
+# Document Editing
+#------------------------------
+sed -i "s/Exec=lyx %F/Exec=oz launch lyx %F/g" /usr/share/applications/lyx.desktop
+sed -i "s/Exec=libreoffice %U/Exec=oz launch libreoffice %U/g" /usr/share/applications/libreoffice-startcenter.desktop
+sed -i "s/Exec=libreoffice --writer %U/Exec=oz launch libreoffice-writer %U/g" /usr/share/applications/libreoffice-writer.desktop
+sed -i "s/Exec=libreoffice --impress %U/Exec=oz launch libreoffice-impress %U/g" /usr/share/applications/libreoffice-impress.desktop
+sed -i "s/Exec=libreoffice --calc %U/Exec=oz launch libreoffice-calc %U/g" /usr/share/applications/libreoffice-calc.desktop
+sed -i "s/Exec=libreoffice --draw %U/Exec=oz launch libreoffice-draw %U/g" /usr/share/applications/libreoffice-draw.desktop
+
+#------------------------------
+# Web Browsers and Email
+#------------------------------
+sed -i "s/Exec=firefox %u/Exec=oz launch firefox %u/g" /usr/share/applications/firefox.desktop
+sed -i "s/Exec=firefox --private-window %u/Exec=oz launch firefox-private %u/g" /usr/share/applications/firefox.desktop
+sed -i "s/Exec=firefox-hardened %u/Exec=oz launch firefox-hardened %u/g" /usr/share/applications/firefox-hardened.desktop
+sed -i "s/Exec=thunderbird %u/Exec=oz launch thunderbird %u/g" /usr/share/applications/mozilla-thunderbird.desktop
+
+#------------------------------
+# Internet enabled programs
+#------------------------------
+sed -i "s/Exec=liferea/Exec=oz launch liferea/g" /usr/share/applications/liferea.desktop
+sed -i "s/Exec=gapplication launch org.gnome.Polari/Exec=oz launch polari/g" /usr/share/applications/org.gnome.Polari.desktop
+sed -i "s/Exec=transmission-gtk %U/Exec=oz launch transmission %U/g" /usr/share/applications/transmission-gtk.desktop
+sed -i "s/Exec=transmission-gtk --paused/Exec=oz launch transmission/g" /usr/share/applications/transmission-gtk.desktop
+sed -i "s/Exec=transmission-gtk --minimised/Exec=oz launch transmission/g" /usr/share/applications/transmission-gtk.desktop

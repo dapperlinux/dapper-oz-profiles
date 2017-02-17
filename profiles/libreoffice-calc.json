@@ -1,6 +1,7 @@
 {
-"name": "libreoffice"
+"name": "libreoffice-calc"
 , "path": "/usr/bin/libreoffice"
+, "default_params": ["--calc"]
 , "paths": [
 ]
 , "allow_files": true

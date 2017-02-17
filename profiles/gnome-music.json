@@ -1,0 +1,31 @@
+{
+"name": "gnome-music"
+,"path": "/usr/bin/gnome-music"
+, "xserver": {
+	"enabled": true
+	, "enable_tray": false
+	, "tray_icon":"/usr/share/icons/hicolor/scalable/apps/gnome-music.svg"
+}
+, "networking":{
+	"type":"empty"
+}
+, "whitelist": [
+	{"path":"${HOME}/.local/share/gnome-music", "can_create":true}
+	
+	, {"path":"${HOME}/.config/dconf", "can_create":true}
+	, {"path":"${HOME}/.cache/dconf", "can_create":true}
+	, {"path":"/run/user/${UID}/dconf", "can_create":true}
+	
+	, {"path":"${HOME}/Music", "can_create":true}
+]
+, "blacklist": [
+]
+, "environment": [
+	{"name":"GTK_THEME", "value":"dapper-dark"}
+	, {"name":"GTK2_RC_FILES", "value":"/usr/share/themes/dapper-dark/gtk-2.0/gtkrc"}
+]
+, "seccomp": {
+	"mode":"blacklist"
+	, "enforce": true
+}
+}

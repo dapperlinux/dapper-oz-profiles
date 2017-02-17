@@ -1,6 +1,7 @@
 {
-"name": "libreoffice"
+"name": "libreoffice-draw"
 , "path": "/usr/bin/libreoffice"
+, "default_params": ["--draw"]
 , "paths": [
 ]
 , "allow_files": true

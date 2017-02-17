@@ -1,6 +1,7 @@
 {
-"name": "libreoffice"
+"name": "libreoffice-writer"
 , "path": "/usr/bin/libreoffice"
+, "default_params": ["--writer"]
 , "paths": [
 ]
 , "allow_files": true

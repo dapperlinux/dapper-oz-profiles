@@ -1,6 +1,7 @@
 {
-"name": "libreoffice"
+"name": "libreoffice-impress"
 , "path": "/usr/bin/libreoffice"
+, "default_params": ["--impress"]
 , "paths": [
 ]
 , "allow_files": true

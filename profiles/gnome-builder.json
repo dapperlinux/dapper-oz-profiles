@@ -1,0 +1,33 @@
+{
+"name": "gnome-builder",
+"path": "/usr/bin/gnome-builder"
+, "xserver": {
+	"enabled": true
+	, "enable_tray": false
+	, "tray_icon":"/usr/share/icons/hicolor/scalable/apps/gnome-builder.svg"
+}
+, "networking":{
+	"type":"empty"
+}
+, "whitelist": [
+    {"path":"${HOME}/.cache/gnome-builder", "can_create":true}
+	, {"path":"${HOME}/.config/gnome-builder", "can_create":true}
+	, {"path":"${HOME}/.local/share/gnome-builder", "can_create":true}
+	
+	, {"path":"${HOME}/.config/dconf", "can_create":true}
+	, {"path":"${HOME}/.cache/dconf", "can_create":true}
+	, {"path":"/run/user/${UID}/dconf", "can_create":true}
+	
+	, {"path":"${HOME}/Projects", "can_create":true}
+]
+, "blacklist": [
+]
+, "environment": [
+	{"name":"GTK_THEME", "value":"dapper-dark"}
+	, {"name":"GTK2_RC_FILES", "value":"/usr/share/themes/dapper-dark/gtk-2.0/gtkrc"}
+]
+, "seccomp": {
+	"mode":"blacklist"
+	, "enforce": true
+}
+}

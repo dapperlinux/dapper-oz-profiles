@@ -1,6 +1,6 @@
 {
-"name": "libreoffice"
-, "path": "/usr/bin/libreoffice"
+"name": "soffice"
+, "path": "/usr/bin/soffice"
 , "paths": [
 ]
 , "allow_files": true
