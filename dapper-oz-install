@@ -23,12 +23,19 @@ sed -i "s/Exec=inkscape %F/Exec=oz launch inkscape %F/g" /usr/share/applications
 # Misc Applications
 #------------------------------
 sed -i "s/Exec=gnome-builder %U/Exec=oz launch gnome-builder %U/g" /usr/share/applications/org.gnome.Builder.desktop
+sed -i "s/DBusActivatable=true/DBusActivatable=false/g" /usr/share/applications/org.gnome.Builder.desktop
+sed -i "s/Exec=gedit %U/Exec=oz launch gedit %U/g" /usr/share/applications/org.gnome.gedit.desktop
+sed -i "s/Exec=gedit --new-window/Exec=oz launch gedit --new-window/g" /usr/share/applications/org.gnome.gedit.desktop
+sed -i "s/Exec=gedit --new-document/Exec=oz launch gedit --new-document/g" /usr/share/applications/org.gnome.gedit.desktop
+sed -i "s/DBusActivatable=true/DBusActivatable=false/g" /usr/share/applications/org.gnome.gedit.desktop
+sed -i "s/Exec=pdfshuffler/Exec=oz launch pdfshuffler/g" /usr/share/applications/pdfshuffler.desktop
 
 #------------------------------
 # Media Programs
 #------------------------------
 sed -i "s/Exec=gnome-music/Exec=oz launch gnome-music/g" /usr/share/applications/gnome-music.desktop
 sed -i "s/Exec=totem %U/Exec=oz launch totem %U/g" /usr/share/applications/org.gnome.Totem.desktop
+sed -i "s/DBusActivatable=true/DBusActivatable=false/g" /usr/share/applications/org.gnome.Totem.desktop
 sed -i "s#Exec=/usr/bin/vlc --started-from-file %U#Exec=oz launch vlc %U#g" /usr/share/applications/vlc.desktop
 
 #------------------------------
@@ -54,6 +61,7 @@ sed -i "s/Exec=thunderbird %u/Exec=oz launch thunderbird %u/g" /usr/share/applic
 #------------------------------
 sed -i "s/Exec=liferea/Exec=oz launch liferea/g" /usr/share/applications/liferea.desktop
 sed -i "s/Exec=gapplication launch org.gnome.Polari/Exec=oz launch polari/g" /usr/share/applications/org.gnome.Polari.desktop
+sed -i "s/DBusActivatable=true/DBusActivatable=false/g" /usr/share/applications/org.gnome.Polari.desktop
 sed -i "s/Exec=transmission-gtk %U/Exec=oz launch transmission %U/g" /usr/share/applications/transmission-gtk.desktop
 sed -i "s/Exec=transmission-gtk --paused/Exec=oz launch transmission/g" /usr/share/applications/transmission-gtk.desktop
 sed -i "s/Exec=transmission-gtk --minimised/Exec=oz launch transmission/g" /usr/share/applications/transmission-gtk.desktop

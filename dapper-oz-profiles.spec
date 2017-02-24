@@ -1,6 +1,6 @@
 Name:    dapper-oz-profiles
 Version: 1
-Release: 3
+Release: 4
 Summary: Dapper Linux OZ Sandboxing Profiles
 URL:     https://github.com/dapperlinux/dapper-oz-profiles
 License: GPLv3+
@@ -33,6 +33,9 @@ dapper-oz-install
 %{_bindir}/dapper-oz-install
 
 %changelog
+* Wed Feb 22 2017 Matthew Ruffell <msr50@uclive.ac.nz>
+- Added gedit and pdfshuffler. Fixed dbus autostart problems. Removed blacklists for mozilla products.
+
 * Wed Feb 15 2017 Matthew Ruffell <msr50@uclive.ac.nz>
 - Added many more profiles and install scripts
 
