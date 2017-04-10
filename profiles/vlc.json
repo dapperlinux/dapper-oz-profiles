@@ -1,5 +1,7 @@
 {
-"path": "/usr/bin/vlc"
+"name": "vlc"
+,"path": "/usr/bin/vlc"
+, "default_params": ["--qt-minimal-interface"]
 , "allow_files": true
 , "xserver": {
 	"enabled": true
@@ -14,11 +16,11 @@
 	{"path":"${HOME}/.config/vlc", "can_create":true}
 	, {"path":"/var/lib/oz/cells.d/vlc-whitelist.seccomp", "read_only":true}
 ]
+, "blacklist": [
+]
 , "environment": [
 	{"name":"GTK_THEME", "value":"dapper-dark"}
 	, {"name":"GTK2_RC_FILES", "value":"/usr/share/themes/dapper-dark/gtk-2.0/gtkrc"}
-]
-, "blacklist": [
 ]
 , "seccomp": {
 	"mode":"whitelist"

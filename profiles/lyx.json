@@ -12,6 +12,9 @@
 , "whitelist": [
     {"path":"${HOME}/.config/LyX", "can_create":true}
 ]
+, "shared_folders": [
+	"${XDG_DOCUMENTS_DIR}"
+]
 , "blacklist": [
 ]
 , "environment": [

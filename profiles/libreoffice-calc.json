@@ -14,12 +14,16 @@
 , "networking":{
 	"type":"empty"
 }
+, "whitelist": [
+]
+, "shared_folders": [
+	"${XDG_DOCUMENTS_DIR}"
+]
+, "blacklist": [
+]
 , "environment": [
 	{"name":"GTK_THEME", "value":"dapper-dark"}
 	, {"name":"GTK2_RC_FILES", "value":"/usr/share/themes/dapper-dark/gtk-2.0/gtkrc"}
-]
-, "whitelist": [
-	{"path":"${XDG_DOCUMENTS_DIR}/LibreOffice", "can_create":true}
 ]
 , "seccomp": {
 	"mode":"blacklist"

@@ -15,8 +15,9 @@
 	, {"path":"${HOME}/.config/dconf", "can_create":true}
 	, {"path":"${HOME}/.cache/dconf", "can_create":true}
 	, {"path":"/run/user/${UID}/dconf", "can_create":true}
-	
-	, {"path":"${HOME}/Music", "can_create":true}
+]
+, "shared_folders": [
+	"${XDG_MUSIC_DIR}"
 ]
 , "blacklist": [
 ]
