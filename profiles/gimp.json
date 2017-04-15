@@ -14,6 +14,7 @@
 }
 , "whitelist": [
     {"path":"${HOME}/.gimp-2.8", "can_create":true}
+   ,{"path":"/etc/gimp", "read_only": true, "ignore": true}
 ]
 , "blacklist": [
 ]

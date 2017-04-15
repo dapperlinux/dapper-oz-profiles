@@ -11,6 +11,7 @@
 }
 , "whitelist": [
     {"path":"${HOME}/.config/LyX", "can_create":true}
+   ,{"path":"/etc/texlive", "read_only": true, "ignore": true}
 ]
 , "shared_folders": [
 	"${XDG_DOCUMENTS_DIR}"

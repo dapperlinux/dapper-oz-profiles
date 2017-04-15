@@ -1,7 +1,7 @@
 {
 "name": "vlc"
 ,"path": "/usr/bin/vlc"
-, "default_params": ["--qt-minimal-interface"]
+, "default_params": ["--qt-minimal-view"]
 , "allow_files": true
 , "xserver": {
 	"enabled": true
