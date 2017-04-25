@@ -2,6 +2,7 @@
 "name": "dapper-hardened-browser"
 , "path": "/usr/bin/dapper-hardened-browser"
 , "default_params": ["-P", "dapper", "-no-remote"]
+, "allow_files":true
 , "xserver": {
 	"enabled": true
 	, "audio_mode": "pulseaudio"

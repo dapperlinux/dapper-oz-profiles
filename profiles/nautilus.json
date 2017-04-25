@@ -10,7 +10,7 @@
 	"type":"bridge"
 }
 , "whitelist": [
-	{"path":"/home/${USER}/."}
+	{"path":"/home/${USER}/", "force":true}
 	, {"path":"/run/media/${USER}"}
 	, {"path":"${HOME}/.config/nautilus", "can_create":true}
 	, {"path":"${HOME}/.local/nautilus", "can_create":true}

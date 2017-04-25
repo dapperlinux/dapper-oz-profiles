@@ -1,6 +1,7 @@
 {
 "name": "gedit",
 "path": "/usr/bin/gedit"
+, "allow_files": true
 , "xserver": {
 	"enabled": true
 	, "enable_tray": false

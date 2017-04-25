@@ -1,21 +1,19 @@
 {
-"name": "lyx"
-,"path": "/usr/bin/lyx"
-, "allow_files": true
+"name": "spotify"
+,"path": "/usr/bin/spotify"
 , "xserver": {
 	"enabled": true
+	, "audio_mode": "pulseaudio"
 	, "enable_tray": false
-	, "tray_icon":"/usr/share/icons/hicolor/scalable/apps/lyx.svg"
+	, "tray_icon":"/usr/share/icons/hicolor/scalable/apps/gimp.svg"
+	, "notifications": true
 }
 , "networking":{
-	"type":"empty"
+	"type":"bridge"
 }
 , "whitelist": [
-    {"path":"${HOME}/.config/LyX", "can_create":true}
-   ,{"path":"/etc/texlive", "read_only": true, "ignore": true}
-]
-, "shared_folders": [
-	"${XDG_DOCUMENTS_DIR}"
+    {"path":"${HOME}/.config/spotify", "can_create":true}
+   ,{"path":"${HOME}/.cache/spotify", "can_create":true}
 ]
 , "blacklist": [
 ]

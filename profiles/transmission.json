@@ -1,6 +1,7 @@
 {
 "name": "transmission",
 "path": "/usr/bin/transmission-gtk"
+, "allow_files": true
 , "xserver": {
 	"enabled": true
 	, "enable_tray": false

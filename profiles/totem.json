@@ -1,9 +1,11 @@
 {
 "name": "totem",
 "path": "/usr/bin/totem"
+, "allow_files": true
 , "xserver": {
 	"enabled": true
 	, "enable_tray": false
+	, "audio_mode": "pulseaudio"
 	, "tray_icon":"/usr/share/icons/hicolor/scalable/apps/totem.svg"
 }
 , "networking":{

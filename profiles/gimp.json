@@ -1,6 +1,7 @@
 {
 "name": "gimp"
 ,"path": "/usr/bin/gimp-2.8"
+, "allow_files": true
 , "paths": [
 	"/usr/bin/gimp"
 ]

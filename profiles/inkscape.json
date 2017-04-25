@@ -1,6 +1,7 @@
 {
 "name": "inkscape"
 ,"path": "/usr/bin/inkscape"
+, "allow_files": true
 , "xserver": {
 	"enabled": true
 	, "enable_tray": false

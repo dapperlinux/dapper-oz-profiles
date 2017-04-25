@@ -1,6 +1,6 @@
 Name:    dapper-oz-profiles
 Version: 1
-Release: 9
+Release: 10
 Summary: Dapper Linux OZ Sandboxing Profiles
 URL:     https://github.com/dapperlinux/dapper-oz-profiles
 License: GPLv3+
@@ -23,14 +23,19 @@ mkdir -p %{buildroot}%{_bindir}
 cp profiles/generic-blacklist.seccomp %{buildroot}%{_sysconfdir}/oz/
 cp profiles/* %{buildroot}%{_sharedstatedir}/oz/cells.d/
 install -m 755 dapper-oz-install %{buildroot}%{_bindir}
+install -m 755 dapper-oz-uninstall %{buildroot}%{_bindir}
 
 %posttrans
 dapper-oz-install
+
+%preun
+dapper-oz-uninstall
 
 %files
 %{_sysconfdir}/oz/generic-blacklist.seccomp
 %{_sharedstatedir}/oz/cells.d/*
 %{_bindir}/dapper-oz-install
+%{_bindir}/dapper-oz-uninstall
 
 %changelog
 * Wed Feb 22 2017 Matthew Ruffell <msr50@uclive.ac.nz>

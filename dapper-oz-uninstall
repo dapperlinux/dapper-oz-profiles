@@ -1,0 +1,68 @@
+#!/bin/bash
+# Oz sandbox profile uninstall for Dapper Linux
+# Typically Oz requires executables to be "diverted"/moved to /usr/bin-oz 
+# and symlinks pointing back to /usr/bin/oz left in place.
+# Dapper Linux takes a different approach and leaves the executables in place,
+# which enables execuables to be updated and have pax flags set.
+# So instead, we use the "oz launch <profile>" command, and stick it in 
+# application .desktop files, which is less intrusive.
+
+#------------------------------
+# Document and Image viewing
+#------------------------------
+sed -i "s/Exec=oz launch eog %U/Exec=eog %U/g" /usr/share/applications/eog.desktop
+sed -i "s/Exec=oz launch evince %U/Exec=evince %U/g" /usr/share/applications/evince.desktop
+
+#------------------------------
+# Image Editing
+#------------------------------
+sed -i "s/Exec=oz launch gimp %U/Exec=gimp-2.8 %U/g" /usr/share/applications/gimp.desktop
+sed -i "s/Exec=oz launch inkscape %F/Exec=inkscape %F/g" /usr/share/applications/inkscape.desktop
+
+#------------------------------
+# Misc Applications
+#------------------------------
+sed -i "s/Exec=oz launch gnome-builder %U/Exec=gnome-builder %U/g" /usr/share/applications/org.gnome.Builder.desktop
+sed -i "s/DBusActivatable=false/DBusActivatable=true/g" /usr/share/applications/org.gnome.Builder.desktop
+sed -i "s/Exec=oz launch gedit %U/Exec=gedit %U/g" /usr/share/applications/org.gnome.gedit.desktop
+sed -i "s/Exec=oz launch gedit --new-window/Exec=gedit --new-window/g" /usr/share/applications/org.gnome.gedit.desktop
+sed -i "s/Exec=oz launch gedit --new-document/Exec=gedit --new-document/g" /usr/share/applications/org.gnome.gedit.desktop
+sed -i "s/DBusActivatable=false/DBusActivatable=true/g" /usr/share/applications/org.gnome.gedit.desktop
+sed -i "s/Exec=oz launch pdfshuffler/Exec=pdfshuffler/g" /usr/share/applications/pdfshuffler.desktop
+
+#------------------------------
+# Media Programs
+#------------------------------
+sed -i "s/Exec=oz launch gnome-music/Exec=gnome-music/g" /usr/share/applications/gnome-music.desktop
+sed -i "s/Exec=oz launch spotify/Exec=spotify %U/g" /usr/share/applications/spotify.desktop
+sed -i "s/Exec=oz launch totem %U/Exec=totem %U/g" /usr/share/applications/org.gnome.Totem.desktop
+sed -i "s/DBusActivatable=false/DBusActivatable=true/g" /usr/share/applications/org.gnome.Totem.desktop
+sed -i "s#Exec=oz launch vlc %U#Exec=/usr/bin/vlc --started-from-file %U#g" /usr/share/applications/vlc.desktop
+
+#------------------------------
+# Document Editing
+#------------------------------
+sed -i "s/Exec=oz launch lyx %F/Exec=lyx %F/g" /usr/share/applications/lyx.desktop
+sed -i "s/Exec=oz launch libreoffice %U/Exec=libreoffice %U/g" /usr/share/applications/libreoffice-startcenter.desktop
+sed -i "s/Exec=oz launch libreoffice-writer %U/Exec=libreoffice --writer %U/g" /usr/share/applications/libreoffice-writer.desktop
+sed -i "s/Exec=oz launch libreoffice-impress %U/Exec=libreoffice --impress %U/g" /usr/share/applications/libreoffice-impress.desktop
+sed -i "s/Exec=oz launch libreoffice-calc %U/Exec=libreoffice --calc %U/g" /usr/share/applications/libreoffice-calc.desktop
+sed -i "s/Exec=oz launch libreoffice-draw %U/Exec=libreoffice --draw %U/g" /usr/share/applications/libreoffice-draw.desktop
+
+#------------------------------
+# Web Browsers and Email
+#------------------------------
+sed -i "s/Exec=oz launch firefox %u/Exec=firefox %u/g" /usr/share/applications/firefox.desktop
+sed -i "s/Exec=oz launch firefox-private %u/Exec=firefox --private-window %u/g" /usr/share/applications/firefox.desktop
+sed -i "s/Exec=oz launch dapper-hardened-browser %u/Exec=dapper-hardened-browser %u/g" /usr/share/applications/dapper-hardened-browser.desktop
+sed -i "s/Exec=oz launch thunderbird %u/Exec=thunderbird %u/g" /usr/share/applications/mozilla-thunderbird.desktop
+
+#------------------------------
+# Internet enabled programs
+#------------------------------
+sed -i "s/Exec=oz launch liferea/Exec=liferea/g" /usr/share/applications/liferea.desktop
+sed -i "s/Exec=oz launch polari/Exec=gapplication launch org.gnome.Polari/g" /usr/share/applications/org.gnome.Polari.desktop
+sed -i "s/DBusActivatable=false/DBusActivatable=true/g" /usr/share/applications/org.gnome.Polari.desktop
+sed -i "s/Exec=oz launch transmission %U/Exec=transmission-gtk %U/g" /usr/share/applications/transmission-gtk.desktop
+sed -i "s/Exec=oz launch transmission/Exec=transmission-gtk --paused/g" /usr/share/applications/transmission-gtk.desktop
+sed -i "s/Exec=oz launch transmission/Exec=transmission-gtk --minimised/g" /usr/share/applications/transmission-gtk.desktop

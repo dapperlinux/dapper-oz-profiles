@@ -1,6 +1,7 @@
 {
 "name": "firefox"
 , "path": "/usr/bin/firefox"
+, "allow_files": true
 , "xserver": {
 	"enabled": true
 	, "audio_mode": "pulseaudio"
