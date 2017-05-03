@@ -11,7 +11,7 @@
 }
 , "whitelist": [
 	{"path":"/home/${USER}/", "force":true}
-	, {"path":"/run/media/${USER}"}
+	, {"path":"/run/media/${USER}", "ignore":true}
 	, {"path":"${HOME}/.config/nautilus", "can_create":true}
 	, {"path":"${HOME}/.local/nautilus", "can_create":true}
 	, {"path":"${HOME}/.cache/thumbnails", "can_create":true}

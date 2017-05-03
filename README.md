@@ -1,9 +1,9 @@
 # dapper-oz-profiles
 
-##About
+## About
 The Dapper Oz Profiles package contains the application profiles used to construct sandboxed applications with Oz. This repository contains application profiles, seccomp system call whitelists and blacklists, and scripts to "install" Oz for the included applications.
 
-##Building
+## Building
 To build this package, first install an RPM development chain:
 
 ```bash
@@ -31,7 +31,7 @@ $ cd ~/rpmbuild/SPECS
 $ rpmbuild -ba dapper-oz-profiles.spec
 ```
 
-##Creating Oz Profiles
+## Creating Oz Profiles
 Howto coming soon.
 
 
