@@ -9,7 +9,7 @@
 	, "notifications": true
 }
 , "networking":{
-	"type":"bridge"
+	"type":"host"
 }
 , "whitelist": [
     {"path":"${HOME}/.config/spotify", "can_create":true}

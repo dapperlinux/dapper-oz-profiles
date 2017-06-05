@@ -9,7 +9,7 @@
 	, "tray_icon":"/usr/share/icons/hicolor/128x128/apps/firefox.png"
 }
 , "networking":{
-	"type":"bridge"
+	"type":"host"
 }
 , "whitelist": [
 	{"path":"${HOME}/.mozilla", "can_create": true}

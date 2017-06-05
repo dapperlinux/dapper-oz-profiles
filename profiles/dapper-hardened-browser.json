@@ -10,7 +10,7 @@
 	, "tray_icon":"/usr/lib64/dapper-hardened-browser/browser/icons/mozicon128.png"
 }
 , "networking":{
-	"type":"bridge"
+	"type":"host"
 }
 , "whitelist": [
 	{"path":"${HOME}/.mozilla", "can_create": true}

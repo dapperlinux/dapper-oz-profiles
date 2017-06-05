@@ -7,7 +7,7 @@
 	, "tray_icon":"/usr/share/icons/hicolor/scalable/apps/nautilus.svg"
 }
 , "networking":{
-	"type":"bridge"
+	"type":"empty"
 }
 , "whitelist": [
 	{"path":"/home/${USER}/", "force":true}

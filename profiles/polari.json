@@ -7,7 +7,7 @@
 	, "tray_icon":"/usr/share/icons/hicolor/scalable/apps/polari.svg"
 }
 , "networking":{
-	"type":"bridge"
+	"type":"host"
 }
 , "whitelist": [
 	{"path":"/run/resolvconf", "can_create":true}

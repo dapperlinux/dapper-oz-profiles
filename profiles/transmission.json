@@ -8,7 +8,7 @@
 	, "tray_icon":"/usr/share/icons/hicolor/scalable/apps/transmission.svg"
 }
 , "networking":{
-	"type":"bridge"
+	"type":"host"
 }
 , "whitelist": [
 	{"path":"/run/resolvconf", "can_create":true}
