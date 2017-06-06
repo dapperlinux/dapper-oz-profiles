@@ -6,7 +6,7 @@
 	, "audio_mode": "pulseaudio"
 	, "enable_tray": false
 	, "tray_icon":"/usr/share/icons/hicolor/scalable/apps/gimp.svg"
-	, "notifications": true
+	, "enable_notifications": true
 }
 , "networking":{
 	"type":"host"

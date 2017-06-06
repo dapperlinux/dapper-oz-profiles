@@ -6,6 +6,7 @@
 	"enabled": true
 	, "enable_tray": false
 	, "tray_icon":"/usr/share/icons/hicolor/scalable/apps/transmission.svg"
+	, "enable_notifications": true
 }
 , "networking":{
 	"type":"host"

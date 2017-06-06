@@ -5,12 +5,15 @@
 	"enabled": true
 	, "enable_tray": false
 	, "tray_icon":"/usr/share/icons/hicolor/scalable/apps/polari.svg"
+	, "enable_notifications": true
 }
 , "networking":{
 	"type":"host"
 }
 , "whitelist": [
 	{"path":"/run/resolvconf", "can_create":true}
+	, {"path":"${HOME}/.cache/telepathy", "can_create":true}
+	, {"path":"${HOME}/.local/share/telepathy", "can_create":true}
 	, {"path":"${HOME}/.config/dconf", "can_create":true}
 	, {"path":"${HOME}/.cache/dconf", "can_create":true}
 	, {"path":"/run/user/${UID}/dconf", "can_create":true}

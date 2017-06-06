@@ -3,8 +3,10 @@
 ,"path": "/usr/bin/gnome-music"
 , "xserver": {
 	"enabled": true
+	, "audio_mode": "pulseaudio"
 	, "enable_tray": false
 	, "tray_icon":"/usr/share/icons/hicolor/scalable/apps/gnome-music.svg"
+	, "enable_notifications": true
 }
 , "networking":{
 	"type":"empty"

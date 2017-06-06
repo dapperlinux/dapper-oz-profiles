@@ -1,11 +1,11 @@
 Name:    dapper-oz-profiles
 Version: 1
-Release: 12
+Release: 13
 Summary: Dapper Linux OZ Sandboxing Profiles
 URL:     https://github.com/dapperlinux/dapper-oz-profiles
 License: GPLv3+
 BuildArch: noarch
-Source0: %{name}-%{version}.tar.gz
+Source0: %{name}-%{version}.tar.xz
 
 %description
 Dapper Oz Profiles are used by the oz sandboxing framework and dictate how sandboxes are constructed for
