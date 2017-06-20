@@ -11,8 +11,7 @@
 	"type":"host"
 }
 , "whitelist": [
-	{"path":"/run/resolvconf", "can_create":true}
-	, {"path":"${HOME}/.cache/telepathy", "can_create":true}
+	{"path":"${HOME}/.cache/telepathy", "can_create":true}
 	, {"path":"${HOME}/.local/share/telepathy", "can_create":true}
 	, {"path":"${HOME}/.config/dconf", "can_create":true}
 	, {"path":"${HOME}/.cache/dconf", "can_create":true}

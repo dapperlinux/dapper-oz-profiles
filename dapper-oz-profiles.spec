@@ -1,6 +1,6 @@
 Name:    dapper-oz-profiles
 Version: 1
-Release: 13
+Release: 14
 Summary: Dapper Linux OZ Sandboxing Profiles
 URL:     https://github.com/dapperlinux/dapper-oz-profiles
 License: GPLv3+
@@ -38,6 +38,9 @@ dapper-oz-uninstall
 %{_bindir}/dapper-oz-uninstall
 
 %changelog
+* Tue Jun 20 2017 Matthew Ruffell <msr50@uclive.ac.nz>
+- Added krita and scribus. Enabled blacklists for mozilla products, fixed some networking things
+
 * Wed Feb 22 2017 Matthew Ruffell <msr50@uclive.ac.nz>
 - Added gedit and pdfshuffler. Fixed dbus autostart problems. Removed blacklists for mozilla products.
 

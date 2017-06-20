@@ -17,6 +17,7 @@ sed -i "s/Exec=evince %U/Exec=oz launch evince %U/g" /usr/share/applications/evi
 # Image Editing
 #------------------------------
 sed -i "s/Exec=gimp-2.8 %U/Exec=oz launch gimp %U/g" /usr/share/applications/gimp.desktop
+sed -i "s/Exec=krita %U/Exec=oz launch krita %U/g" /usr/share/applications/org.kde.krita.desktop
 sed -i "s/Exec=inkscape %F/Exec=oz launch inkscape %F/g" /usr/share/applications/inkscape.desktop
 
 #------------------------------
@@ -48,6 +49,7 @@ sed -i "s/Exec=libreoffice --writer %U/Exec=oz launch libreoffice-writer %U/g" /
 sed -i "s/Exec=libreoffice --impress %U/Exec=oz launch libreoffice-impress %U/g" /usr/share/applications/libreoffice-impress.desktop
 sed -i "s/Exec=libreoffice --calc %U/Exec=oz launch libreoffice-calc %U/g" /usr/share/applications/libreoffice-calc.desktop
 sed -i "s/Exec=libreoffice --draw %U/Exec=oz launch libreoffice-draw %U/g" /usr/share/applications/libreoffice-draw.desktop
+sed -i "s/Exec=scribus %f/Exec=oz launch scribus %f/g" /usr/share/applications/scribus.desktop
 
 #------------------------------
 # Web Browsers and Email

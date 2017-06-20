@@ -1,24 +1,21 @@
 {
-"name": "firefox"
-, "path": "/usr/bin/firefox"
+"name": "krita"
+,"path": "/usr/bin/krita"
 , "allow_files": true
 , "xserver": {
 	"enabled": true
-	, "audio_mode": "pulseaudio"
 	, "enable_tray": false
-	, "tray_icon":"/usr/share/icons/hicolor/128x128/apps/firefox.png"
+	, "tray_icon":"/usr/share/icons/hicolor/scalable/apps/krita.svg"
 }
 , "networking":{
-	"type":"host"
+	"type":"empty"
 }
 , "whitelist": [
-	{"path":"${HOME}/.mozilla", "can_create": true}
-	, {"_path":"${HOME}/.cache/mozilla", "can_create":true}
-
-	, {"path":"/var/lib/oz/cells.d/firefox.json", "read_only": true}
+    {"path":"${HOME}/.config/kritarc", "can_create":true}
+   ,{"path":"${HOME}/.local/share/krita", "can_create":true}
 ]
 , "shared_folders": [
-	"${XDG_DOWNLOAD_DIR}"
+	"${XDG_PICTURES_DIR}"
 ]
 , "blacklist": [
 ]

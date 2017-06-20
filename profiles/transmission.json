@@ -12,9 +12,7 @@
 	"type":"host"
 }
 , "whitelist": [
-	{"path":"/run/resolvconf", "can_create":true}
-	
-	, {"path":"${HOME}/.cache/transmission", "can_create":true}
+	{"path":"${HOME}/.cache/transmission", "can_create":true}
 	, {"path":"${HOME}/.config/transmission", "can_create":true}
 	
 	, {"path":"${HOME}/.config/dconf", "can_create":true}

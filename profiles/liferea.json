@@ -10,9 +10,7 @@
 	"type":"host"
 }
 , "whitelist": [
-	{"path":"/run/resolvconf"}
-
-	, {"path":"${HOME}/.local/share/liferea", "can_create":true}
+	{"path":"${HOME}/.local/share/liferea", "can_create":true}
 	, {"path":"${HOME}/.cache/liferea", "can_create":true}
 	, {"path":"${HOME}/.config/liferea", "can_create":true}
 

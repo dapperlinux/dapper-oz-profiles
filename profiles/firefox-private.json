@@ -27,5 +27,7 @@
 	, {"name":"GTK2_RC_FILES", "value":"/usr/share/themes/dapper-dark/gtk-2.0/gtkrc"}
 ]
 , "seccomp": {
+	"mode":"blacklist"
+	, "enforce": true
 }
 }

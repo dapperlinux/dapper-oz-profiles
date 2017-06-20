@@ -10,9 +10,7 @@
 	"type":"host"
 }
 , "whitelist": [
-	{"path":"/run/resolvconf"}
-
-	, {"path":"${HOME}/.cache/thunderbird", "can_create":true}
+    {"path":"${HOME}/.cache/thunderbird", "can_create":true}
 
 	, {"path":"${HOME}/.gnupg/pubring.gpg", "read_only":true, "ignore":true}
 	, {"path":"${HOME}/.gnupg/pubring.kbx", "read_only":true, "ignore":true}
@@ -26,7 +24,7 @@
 , "shared_folders": [
 	"${XDG_DOWNLOAD_DIR}"
 ]
-, "_blacklist": [
+, "blacklist": [
 ]
 , "environment": [
 	{"name":"GPG_AGENT_INFO"}
@@ -36,5 +34,7 @@
 	, {"name":"GTK2_RC_FILES", "value":"/usr/share/themes/dapper-dark/gtk-2.0/gtkrc"}
 ]
 , "seccomp": {
+	"mode":"blacklist"
+	, "enforce": true
 }
 }
