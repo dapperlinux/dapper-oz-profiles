@@ -30,6 +30,8 @@ sed -i "s/Exec=oz launch gedit --new-window/Exec=gedit --new-window/g" /usr/shar
 sed -i "s/Exec=oz launch gedit --new-document/Exec=gedit --new-document/g" /usr/share/applications/org.gnome.gedit.desktop
 sed -i "s/DBusActivatable=false/DBusActivatable=true/g" /usr/share/applications/org.gnome.gedit.desktop
 sed -i "s/Exec=oz launch pdfshuffler/Exec=pdfshuffler/g" /usr/share/applications/pdfshuffler.desktop
+sed -i "s/Exec=oz launch nautilus/Exec=nautilus/g" /usr/share/applications/org.gnome.Nautilus.desktop
+sed -i "s/DBusActivatable=false/DBusActivatable=true/g" /usr/share/applications/org.gnome.Nautilus.desktop
 
 #------------------------------
 # Media Programs
@@ -58,6 +60,7 @@ sed -i "s/Exec=oz launch firefox %u/Exec=firefox %u/g" /usr/share/applications/f
 sed -i "s/Exec=oz launch firefox-private %u/Exec=firefox --private-window %u/g" /usr/share/applications/firefox.desktop
 sed -i "s/Exec=oz launch dapper-hardened-browser %u/Exec=dapper-hardened-browser %u/g" /usr/share/applications/dapper-hardened-browser.desktop
 sed -i "s/Exec=oz launch thunderbird %u/Exec=thunderbird %u/g" /usr/share/applications/mozilla-thunderbird.desktop
+sed -i "s/Exec=oz launch evolution/Exec=evolution/g" /usr/share/applications/evolution.desktop
 
 #------------------------------
 # Internet enabled programs

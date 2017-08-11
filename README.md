@@ -22,7 +22,7 @@ $ mv dapper-oz-profiles.spec ~/rpmbuild/SPECS/
 $ mkdir -p ~/rpmbuild/SOURCES/dapper-oz-profiles-1
 $ mv * ~/rpmbuild/SOURCES/dapper-oz-profiles-1
 $ cd ~/rpmbuild/SOURCES/
-$ tar -czvf dapper-oz-profiles-1.tar.gz dapper-oz-profiles-1
+$ tar -cJvf dapper-oz-profiles-1.tar.xz dapper-oz-profiles-1
 ```
 
 and finally, you can build RPMs and SRPMs with:

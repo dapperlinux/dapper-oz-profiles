@@ -1,6 +1,6 @@
 Name:    dapper-oz-profiles
 Version: 1
-Release: 14
+Release: 15
 Summary: Dapper Linux OZ Sandboxing Profiles
 URL:     https://github.com/dapperlinux/dapper-oz-profiles
 License: GPLv3+
@@ -32,12 +32,16 @@ dapper-oz-install
 dapper-oz-uninstall
 
 %files
+%license LICENSE
 %{_sysconfdir}/oz/generic-blacklist.seccomp
 %{_sharedstatedir}/oz/cells.d/*
 %{_bindir}/dapper-oz-install
 %{_bindir}/dapper-oz-uninstall
 
 %changelog
+* Fri Aug 11 2017 Matthew Ruffell <msr50@uclive.ac.nz>
+- Added evolution and added nautilus as default sandboxed.
+
 * Tue Jun 20 2017 Matthew Ruffell <msr50@uclive.ac.nz>
 - Added krita and scribus. Enabled blacklists for mozilla products, fixed some networking things
 

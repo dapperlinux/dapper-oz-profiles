@@ -1,0 +1,34 @@
+{
+"name": "evolution"
+, "path": "/usr/bin/evolution"
+, "allow_files": true
+, "xserver": {
+	"enabled": true
+	, "audio_mode": "pulseaudio"
+	, "enable_tray": false
+	, "tray_icon":"/usr/share/icons/hicolor/128x128/apps/evolution.png"
+}
+, "networking":{
+	"type":"host"
+}
+, "whitelist": [
+	{"path":"${HOME}/.config/evolution", "can_create": true}
+	, {"path":"${HOME}/.cache/evolution", "can_create":true}
+	, {"path":"${HOME}/.local/share/evolution", "can_create":true}
+
+	, {"path":"/var/lib/oz/cells.d/evolution.json", "read_only": true}
+]
+, "shared_folders": [
+	"${XDG_DOWNLOAD_DIR}"
+]
+, "blacklist": [
+]
+, "environment": [
+	{"name":"GTK_THEME", "value":"dapper-dark"}
+	, {"name":"GTK2_RC_FILES", "value":"/usr/share/themes/dapper-dark/gtk-2.0/gtkrc"}
+]
+, "seccomp": {
+	"mode":"blacklist"
+	, "enforce": true
+}
+}
