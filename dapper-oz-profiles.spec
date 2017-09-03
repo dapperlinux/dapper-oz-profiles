@@ -1,6 +1,6 @@
 Name:    dapper-oz-profiles
 Version: 1
-Release: 15
+Release: 16
 Summary: Dapper Linux OZ Sandboxing Profiles
 URL:     https://github.com/dapperlinux/dapper-oz-profiles
 License: GPLv3+
@@ -39,6 +39,9 @@ dapper-oz-uninstall
 %{_bindir}/dapper-oz-uninstall
 
 %changelog
+* Sun Sep  3 2017 Matthew Ruffell <msr50@uclive.ac.nz>
+- Added file existance checks to install / uninstall
+
 * Fri Aug 11 2017 Matthew Ruffell <msr50@uclive.ac.nz>
 - Added evolution and added nautilus as default sandboxed.
 
