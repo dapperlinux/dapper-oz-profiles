@@ -63,7 +63,7 @@ fi
 # Nautilus
 if [ -e /usr/share/applications/org.gnome.Nautilus.desktop ]
 then
-    sed -i "s/Exec=oz launch nautilus/Exec=nautilus/g" /usr/share/applications/org.gnome.Nautilus.desktop
+    sed -i "s/Exec=oz launch nautilus/Exec=nautilus --new-window/g" /usr/share/applications/org.gnome.Nautilus.desktop
     sed -i "s/DBusActivatable=false/DBusActivatable=true/g" /usr/share/applications/org.gnome.Nautilus.desktop
 fi
 
