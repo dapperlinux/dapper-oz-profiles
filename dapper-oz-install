@@ -13,12 +13,12 @@
 # Eog
 if [ -e /usr/share/applications/eog.desktop ]
 then
-    sed -i "s/Exec=eog %U/Exec=oz launch eog %U/g" /usr/share/applications/eog.desktop
+    sed -i "s/\bExec\b=eog/Exec=oz launch eog/g" /usr/share/applications/eog.desktop
 fi
 # Evince
 if [ -e /usr/share/applications/evince.desktop ]
 then
-    sed -i "s/Exec=evince %U/Exec=oz launch evince %U/g" /usr/share/applications/evince.desktop
+    sed -i "s/\bExec\b=evince/Exec=oz launch evince/g" /usr/share/applications/evince.desktop
 fi
 
 #------------------------------
@@ -27,17 +27,17 @@ fi
 #Gimp
 if [ -e /usr/share/applications/gimp.desktop ]
 then
-    sed -i "s/Exec=gimp-2.8 %U/Exec=oz launch gimp %U/g" /usr/share/applications/gimp.desktop
+    sed -i "s/\bExec\b=gimp-2.8/Exec=oz launch gimp/g" /usr/share/applications/gimp.desktop
 fi
 # Krita
 if [ -e /usr/share/applications/org.kde.krita.desktop ]
 then
-    sed -i "s/Exec=krita %U/Exec=oz launch krita %U/g" /usr/share/applications/org.kde.krita.desktop
+    sed -i "s/\bExec\b=krita/Exec=oz launch krita/g" /usr/share/applications/org.kde.krita.desktop
 fi
 # Inkscape
 if [ -e /usr/share/applications/inkscape.desktop ]
 then
-    sed -i "s/Exec=inkscape %F/Exec=oz launch inkscape %F/g" /usr/share/applications/inkscape.desktop
+    sed -i "s/\bExec\b=inkscape/Exec=oz launch inkscape/g" /usr/share/applications/inkscape.desktop
 fi
 
 #------------------------------
@@ -46,24 +46,24 @@ fi
 # Builder
 if [ -e /usr/share/applications/org.gnome.Builder.desktop ]
 then
-    sed -i "s/Exec=gnome-builder %U/Exec=oz launch gnome-builder %U/g" /usr/share/applications/org.gnome.Builder.desktop
+    sed -i "s/\bExec\b=gnome-builder/Exec=oz launch gnome-builder/g" /usr/share/applications/org.gnome.Builder.desktop
     sed -i "s/DBusActivatable=true/DBusActivatable=false/g" /usr/share/applications/org.gnome.Builder.desktop
 fi
 # Gedit
 if [ -e /usr/share/applications/org.gnome.gedit.desktop ]
 then
-    sed -i "s/Exec=gedit/Exec=oz launch gedit/g" /usr/share/applications/org.gnome.gedit.desktop
+    sed -i "s/\bExec\b=gedit/Exec=oz launch gedit/g" /usr/share/applications/org.gnome.gedit.desktop
     sed -i "s/DBusActivatable=true/DBusActivatable=false/g" /usr/share/applications/org.gnome.gedit.desktop
 fi
 # Pdfshuffler
 if [ -e /usr/share/applications/pdfshuffler.desktop ]
 then
-    sed -i "s/Exec=pdfshuffler/Exec=oz launch pdfshuffler/g" /usr/share/applications/pdfshuffler.desktop
+    sed -i "s/\bExec\b=pdfshuffler/Exec=oz launch pdfshuffler/g" /usr/share/applications/pdfshuffler.desktop
 fi
 # Nautilus
 if [ -e /usr/share/applications/org.gnome.Nautilus.desktop ]
 then
-    sed -i "s/Exec=nautilus --new-window/Exec=oz launch nautilus/g" /usr/share/applications/org.gnome.Nautilus.desktop
+    sed -i "s/\bExec\b=nautilus --new-window/Exec=oz launch nautilus/g" /usr/share/applications/org.gnome.Nautilus.desktop
     sed -i "s/DBusActivatable=true/DBusActivatable=false/g" /usr/share/applications/org.gnome.Nautilus.desktop
 fi
 
@@ -73,23 +73,23 @@ fi
 # Gnome-music
 if [ -e /usr/share/applications/gnome-music.desktop ]
 then
-    sed -i "s/Exec=gnome-music/Exec=oz launch gnome-music/g" /usr/share/applications/gnome-music.desktop
+    sed -i "s/\bExec\b=gnome-music/Exec=oz launch gnome-music/g" /usr/share/applications/gnome-music.desktop
 fi
 # Spotify
 if [ -e /usr/share/applications/spotify.desktop ]
 then
-    sed -i "s/Exec=spotify %U/Exec=oz launch spotify/g" /usr/share/applications/spotify.desktop
+    sed -i "s/\bExec\b=spotify/Exec=oz launch spotify/g" /usr/share/applications/spotify.desktop
 fi
 # Totem
 if [ -e /usr/share/applications/org.gnome.Totem.desktop ]
 then
-    sed -i "s/Exec=totem %U/Exec=oz launch totem %U/g" /usr/share/applications/org.gnome.Totem.desktop
+    sed -i "s/\bExec\b=totem/Exec=oz launch totem/g" /usr/share/applications/org.gnome.Totem.desktop
     sed -i "s/DBusActivatable=true/DBusActivatable=false/g" /usr/share/applications/org.gnome.Totem.desktop
 fi
 # VLC
 if [ -e /usr/share/applications/vlc.desktop ]
 then
-    sed -i "s#Exec=/usr/bin/vlc --started-from-file %U#Exec=oz launch vlc %U#g" /usr/share/applications/vlc.desktop
+    sed -i "s#Exec=/usr/bin/vlc --started-from-file#Exec=oz launch vlc#g" /usr/share/applications/vlc.desktop
 fi
 
 #------------------------------
@@ -98,37 +98,37 @@ fi
 #Lyx
 if [ -e /usr/share/applications/lyx.desktop ]
 then
-    sed -i "s/Exec=lyx %F/Exec=oz launch lyx %F/g" /usr/share/applications/lyx.desktop
+    sed -i "s/\bExec\b=lyx/Exec=oz launch lyx/g" /usr/share/applications/lyx.desktop
 fi
 # Libreoffice
 if [ -e /usr/share/applications/libreoffice-startcenter.desktop ]
 then
-    sed -i "s/Exec=libreoffice %U/Exec=oz launch libreoffice %U/g" /usr/share/applications/libreoffice-startcenter.desktop
+    sed -i "s/\bExec\b=libreoffice/Exec=oz launch libreoffice/g" /usr/share/applications/libreoffice-startcenter.desktop
 fi
 # Libreoffice Writer
 if [ -e /usr/share/applications/libreoffice-writer.desktop ]
 then
-    sed -i "s/Exec=libreoffice --writer %U/Exec=oz launch libreoffice-writer %U/g" /usr/share/applications/libreoffice-writer.desktop
+    sed -i "s/\bExec\b=libreoffice --writer/Exec=oz launch libreoffice-writer/g" /usr/share/applications/libreoffice-writer.desktop
 fi
 # Libreoffice Impress
 if [ -e /usr/share/applications/libreoffice-impress.desktop ]
 then
-    sed -i "s/Exec=libreoffice --impress %U/Exec=oz launch libreoffice-impress %U/g" /usr/share/applications/libreoffice-impress.desktop
+    sed -i "s/\bExec\b=libreoffice --impress/\bExec\b=oz launch libreoffice-impress/g" /usr/share/applications/libreoffice-impress.desktop
 fi
 # Libreoffice Calc
 if [ -e /usr/share/applications/libreoffice-calc.desktop ]
 then
-    sed -i "s/Exec=libreoffice --calc %U/Exec=oz launch libreoffice-calc %U/g" /usr/share/applications/libreoffice-calc.desktop
+    sed -i "s/\bExec\b=libreoffice --calc/Exec=oz launch libreoffice-calc/g" /usr/share/applications/libreoffice-calc.desktop
 fi
 # Libreoffice Draw
 if [ -e /usr/share/applications/libreoffice-draw.desktop ]
 then
-    sed -i "s/Exec=libreoffice --draw %U/Exec=oz launch libreoffice-draw %U/g" /usr/share/applications/libreoffice-draw.desktop
+    sed -i "s/\bExec\b=libreoffice --draw/Exec=oz launch libreoffice-draw/g" /usr/share/applications/libreoffice-draw.desktop
 fi
 # Scribus
 if [ -e /usr/share/applications/scribus.desktop ]
 then
-    sed -i "s/Exec=scribus %f/Exec=oz launch scribus %f/g" /usr/share/applications/scribus.desktop
+    sed -i "s/\bExec\b=scribus/\bExec\b=oz launch scribus/g" /usr/share/applications/scribus.desktop
 fi
 
 #------------------------------
@@ -137,41 +137,41 @@ fi
 # Firefox
 if [ -e /usr/share/applications/firefox.desktop ]
 then
-    sed -i "s/Exec=firefox %u/Exec=oz launch firefox %u/g" /usr/share/applications/firefox.desktop
-    sed -i "s/Exec=firefox --private-window %u/Exec=oz launch firefox-private %u/g" /usr/share/applications/firefox.desktop
+    sed -i "s/\bExec\b=firefox/Exec=oz launch firefox/g" /usr/share/applications/firefox.desktop
+    sed -i "s/\bExec\b=firefox --private-window/Exec=oz launch firefox-private/g" /usr/share/applications/firefox.desktop
 fi
 # Dapper Hardened Browser
 if [ -e /usr/share/applications/dapper-hardened-browser.desktop ]
 then
-    sed -i "s/Exec=dapper-hardened-browser %u/Exec=oz launch dapper-hardened-browser %u/g" /usr/share/applications/dapper-hardened-browser.desktop
+    sed -i "s/\bExec\b=dapper-hardened-browser/Exec=oz launch dapper-hardened-browser/g" /usr/share/applications/dapper-hardened-browser.desktop
 fi
 # Thunderbird
 if [ -e /usr/share/applications/mozilla-thunderbird.desktop ]
 then
-    sed -i "s/Exec=thunderbird %u/Exec=oz launch thunderbird %u/g" /usr/share/applications/mozilla-thunderbird.desktop
+    sed -i "s/\bExec\b=thunderbird/Exec=oz launch thunderbird/g" /usr/share/applications/mozilla-thunderbird.desktop
 fi
 # Evolution
 if [ -e /usr/share/applications/evolution.desktop ]
 then
-    sed -i "s/Exec=evolution/Exec=oz launch evolution/g" /usr/share/applications/evolution.desktop
+    sed -i "s/\bExec\b=evolution/Exec=oz launch evolution/g" /usr/share/applications/evolution.desktop
 fi
 
 #------------------------------
 # Internet enabled programs
 #------------------------------
 # Liferea
-if [ -e /usr/share/applications/liferea.desktop ]
+if [ -e /usr/share/applications/net.sourceforge.liferea.desktop ]
 then
-    sed -i "s/Exec=liferea/Exec=oz launch liferea/g" /usr/share/applications/liferea.desktop
+    sed -i "s/\bExec\b=liferea/Exec=oz launch liferea/g" /usr/share/applications/net.sourceforge.liferea.desktop
 fi
 # Polari
 if [ -e /usr/share/applications/org.gnome.Polari.desktop ]
 then
-    sed -i "s/Exec=gapplication launch org.gnome.Polari/Exec=oz launch polari/g" /usr/share/applications/org.gnome.Polari.desktop
+    sed -i "s/\bExec\b=gapplication launch org.gnome.Polari/Exec=oz launch polari/g" /usr/share/applications/org.gnome.Polari.desktop
     sed -i "s/DBusActivatable=true/DBusActivatable=false/g" /usr/share/applications/org.gnome.Polari.desktop
 fi
 # Transmission
 if [ -e /usr/share/applications/transmission-gtk.desktop ]
 then
-    sed -i "s/Exec=transmission-gtk/Exec=oz launch transmission/g" /usr/share/applications/transmission-gtk.desktop
+    sed -i "s/\bExec\b=transmission-gtk/Exec=oz launch transmission/g" /usr/share/applications/transmission-gtk.desktop
 fi

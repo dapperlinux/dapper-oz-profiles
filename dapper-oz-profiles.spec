@@ -1,6 +1,6 @@
 Name:    dapper-oz-profiles
 Version: 1
-Release: 17
+Release: 18
 Summary: Dapper Linux OZ Sandboxing Profiles
 URL:     https://github.com/dapperlinux/dapper-oz-profiles
 License: GPLv3+
@@ -39,6 +39,9 @@ dapper-oz-uninstall
 %{_bindir}/dapper-oz-uninstall
 
 %changelog
+* Wed Sep  6 2017 Matthew Ruffell <msr50@uclive.ac.nz>
+- Removed %u etc from sed commands to get entire file easier. Changed liferea file name.
+
 * Sun Sep  3 2017 Matthew Ruffell <msr50@uclive.ac.nz>
 - Added file existance checks to install / uninstall
 
