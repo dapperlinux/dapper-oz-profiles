@@ -163,6 +163,7 @@ fi
 if [ -e /usr/share/applications/net.sourceforge.liferea.desktop ]
 then
     sed -i "s/\bExec\b=oz launch liferea/Exec=liferea/g" /usr/share/applications/net.sourceforge.liferea.desktop
+    sed -i "s/DBusActivatable=false/DBusActivatable=true/g" /usr/share/applications/net.sourceforge.liferea.desktop
 fi
 # Polari
 if [ -e /usr/share/applications/org.gnome.Polari.desktop ]
