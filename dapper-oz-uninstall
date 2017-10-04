@@ -63,7 +63,7 @@ fi
 # Nautilus
 if [ -e /usr/share/applications/org.gnome.Nautilus.desktop ]
 then
-    sed -i "s/\bExec\b=oz launch nautilus/\bExec\b=nautilus --new-window/g" /usr/share/applications/org.gnome.Nautilus.desktop
+    sed -i "s/\bExec\b=oz launch nautilus/Exec=nautilus --new-window/g" /usr/share/applications/org.gnome.Nautilus.desktop
     sed -i "s/DBusActivatable=false/DBusActivatable=true/g" /usr/share/applications/org.gnome.Nautilus.desktop
 fi
 
@@ -89,7 +89,7 @@ fi
 # VLC
 if [ -e /usr/share/applications/vlc.desktop ]
 then
-    sed -i "s#Exec=oz launch vlc#Exec=/usr/bin/vlc --started-from-file#g" /usr/share/applications/vlc.desktop
+    sed -i "s#\bExec\b=oz launch vlc#Exec=/usr/bin/vlc --started-from-file#g" /usr/share/applications/vlc.desktop
 fi
 
 #------------------------------
@@ -113,7 +113,7 @@ fi
 # Libreoffice Impress
 if [ -e /usr/share/applications/libreoffice-impress.desktop ]
 then
-    sed -i "s/\bExec\b=oz launch libreoffice-impress/\bExec\b=libreoffice --impress/g" /usr/share/applications/libreoffice-impress.desktop
+    sed -i "s/\bExec\b=oz launch libreoffice-impress/Exec=libreoffice --impress/g" /usr/share/applications/libreoffice-impress.desktop
 fi
 # Libreoffice Calc
 if [ -e /usr/share/applications/libreoffice-calc.desktop ]
@@ -128,7 +128,7 @@ fi
 # Scribus
 if [ -e /usr/share/applications/scribus.desktop ]
 then
-    sed -i "s/\bExec\b=oz launch scribus/\bExec\b=scribus/g" /usr/share/applications/scribus.desktop
+    sed -i "s/\bExec\b=oz launch scribus/Exec=scribus/g" /usr/share/applications/scribus.desktop
 fi
 
 #------------------------------

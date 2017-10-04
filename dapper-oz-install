@@ -89,7 +89,7 @@ fi
 # VLC
 if [ -e /usr/share/applications/vlc.desktop ]
 then
-    sed -i "s#Exec=/usr/bin/vlc --started-from-file#Exec=oz launch vlc#g" /usr/share/applications/vlc.desktop
+    sed -i "s#\bExec\b=/usr/bin/vlc --started-from-file#Exec=oz launch vlc#g" /usr/share/applications/vlc.desktop
 fi
 
 #------------------------------
@@ -113,7 +113,7 @@ fi
 # Libreoffice Impress
 if [ -e /usr/share/applications/libreoffice-impress.desktop ]
 then
-    sed -i "s/\bExec\b=libreoffice --impress/\bExec\b=oz launch libreoffice-impress/g" /usr/share/applications/libreoffice-impress.desktop
+    sed -i "s/\bExec\b=libreoffice --impress/Exec=oz launch libreoffice-impress/g" /usr/share/applications/libreoffice-impress.desktop
 fi
 # Libreoffice Calc
 if [ -e /usr/share/applications/libreoffice-calc.desktop ]
@@ -128,7 +128,7 @@ fi
 # Scribus
 if [ -e /usr/share/applications/scribus.desktop ]
 then
-    sed -i "s/\bExec\b=scribus/\bExec\b=oz launch scribus/g" /usr/share/applications/scribus.desktop
+    sed -i "s/\bExec\b=scribus/Exec=oz launch scribus/g" /usr/share/applications/scribus.desktop
 fi
 
 #------------------------------
